@@ -32,7 +32,11 @@ jobs:
                   docker-compose up -d php
                   sleep 10
                   make reset-db
-                  
+
+            - name: Setup tmate session
+              if: always()
+              uses: mxschmitt/action-tmate@v3
+
             - name: Prepare shop
               run: |
                   cd /home/runner/work/docker-eshop-sdk/data/oxideshop/
