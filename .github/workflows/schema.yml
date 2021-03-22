@@ -17,7 +17,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v2
 
-            - name: Build docker
+            - name: Build Docker
               run: |
                   cd /home/runner/work/
                   git clone --depth 1 https://github.com/OXID-eSales/docker-eshop-sdk.git
